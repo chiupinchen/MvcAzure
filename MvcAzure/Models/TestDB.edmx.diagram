@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="16e7e62a63304bda8c4474e7d0ec78bb" Name="Diagram1">
+        <EntityTypeShape EntityType="TestDBModel.Person" Width="1.5" PointX="0.625" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDBModel.Degree" Width="1.5" PointX="3.375" PointY="1" />
+        <AssociationConnector Association="TestDBModel.FK_Degree_0" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TestDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="TestDBModelStoreContainer">
+    <EntitySet Name="Degree" EntityType="TestDBModel.Store.Degree" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Person" EntityType="TestDBModel.Store.Person" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Degree_0" Association="TestDBModel.Store.FK_Degree_0">
+      <End Role="Person" EntitySet="Person" />
+      <End Role="Degree" EntitySet="Degree" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Degree">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="GPA" Type="float" Nullable="false" />
+    <Property Name="PersonId" Type="int" />
+  </EntityType>
+  <EntityType Name="Person">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Age" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Degree_0">
+    <End Role="Person" Type="TestDBModel.Store.Person" Multiplicity="0..1" />
+    <End Role="Degree" Type="TestDBModel.Store.Degree" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Degree">
+        <PropertyRef Name="PersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -20,13 +20,18 @@ namespace MvcAzure.Controllers
             return View(oPersonList);
         }
 
+
+
         //
         // GET: /Home/Details/5
 
         public ActionResult Details(int id)
         {
+                
             return View();
         }
+
+        
 
         //
         // GET: /Home/Create

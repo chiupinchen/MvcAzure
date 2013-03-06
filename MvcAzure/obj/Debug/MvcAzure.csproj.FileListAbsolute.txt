@@ -31,3 +31,5 @@ C:\gitHubTest\MvcAzure\MvcAzure\bin\System.Web.WebPages.Deployment.xml
 C:\gitHubTest\MvcAzure\MvcAzure\bin\System.Web.WebPages.Razor.xml
 C:\gitHubTest\MvcAzure\MvcAzure\obj\Debug\MvcAzure.dll
 C:\gitHubTest\MvcAzure\MvcAzure\obj\Debug\MvcAzure.pdb
+C:\gitHubTest\MvcAzure\MvcAzure\bin\AutoMapper.dll
+C:\gitHubTest\MvcAzure\MvcAzure\bin\AutoMapper.xml
